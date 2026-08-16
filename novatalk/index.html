@@ -1,0 +1,1110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="NovaTalk by AJ APPLICATIONS — talk to strangers through real-time online conversations.">
+  <meta name="theme-color" content="#f4f1ea">
+  <title>NovaTalk — Talk to Strangers</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f4f1ea;
+      --surface: #fbfaf7;
+      --surface-strong: #ffffff;
+      --ink: #171716;
+      --muted: #6d6b66;
+      --line: #d9d5cc;
+      --accent: #d95b3d;
+      --accent-dark: #b9472d;
+      --dark: #1b1b19;
+      --dark-soft: #252522;
+      --dark-muted: #aaa79f;
+      --max: 1180px;
+      --radius: 12px;
+      --shadow: 0 20px 55px rgba(27, 27, 25, .10);
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 88px;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      border-bottom: 1px solid rgba(217, 213, 204, .9);
+      background: rgba(244, 241, 234, .94);
+      backdrop-filter: blur(10px);
+    }
+
+    .nav {
+      width: min(var(--max), calc(100% - 40px));
+      min-height: 76px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: baseline;
+      gap: 10px;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      white-space: nowrap;
+    }
+
+    .brand small {
+      color: var(--muted);
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: .14em;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      margin-left: auto;
+      margin-right: 8px;
+    }
+
+    .nav-links a {
+      color: #4e4c47;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: .11em;
+      transition: color 180ms ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus-visible {
+      color: var(--ink);
+    }
+
+    .nav-cta,
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0 18px;
+      border: 1px solid var(--ink);
+      background: var(--ink);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
+    }
+
+    .nav-cta:hover,
+    .button:hover {
+      background: #2b2b28;
+      border-color: #2b2b28;
+      transform: translateY(-1px);
+    }
+
+    .button.secondary {
+      background: transparent;
+      color: var(--ink);
+      border-color: #aaa69d;
+    }
+
+    .button.secondary:hover {
+      background: var(--surface-strong);
+      border-color: var(--ink);
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 42px;
+      height: 42px;
+      padding: 0;
+      border: 1px solid var(--line);
+      background: transparent;
+      color: var(--ink);
+      cursor: pointer;
+    }
+
+    .menu-toggle span,
+    .menu-toggle span::before,
+    .menu-toggle span::after {
+      display: block;
+      width: 17px;
+      height: 1.5px;
+      background: currentColor;
+      margin: auto;
+      content: "";
+    }
+
+    .menu-toggle span::before { transform: translateY(-5px); }
+    .menu-toggle span::after { transform: translateY(3.5px); }
+
+    .hero {
+      width: min(var(--max), calc(100% - 40px));
+      margin: 0 auto;
+      padding: 105px 0 88px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.02fr) minmax(400px, .98fr);
+      gap: 76px;
+      align-items: center;
+    }
+
+    .eyebrow,
+    .section-label,
+    .meta {
+      color: var(--muted);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      max-width: 680px;
+      margin: 17px 0 22px;
+      font-size: clamp(48px, 6vw, 78px);
+      line-height: .99;
+      letter-spacing: -.055em;
+      font-weight: 700;
+    }
+
+    .hero-copy {
+      max-width: 610px;
+      margin: 0;
+      color: #595750;
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 34px;
+    }
+
+    .hero-note {
+      margin-top: 20px;
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .preview {
+      position: relative;
+      min-height: 570px;
+      border: 1px solid #cfcac0;
+      background: #ece8df;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .preview-top {
+      height: 54px;
+      padding: 0 18px;
+      border-bottom: 1px solid #d2cdc2;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #f8f6f1;
+    }
+
+    .window-mark {
+      display: flex;
+      gap: 5px;
+    }
+
+    .window-mark i {
+      width: 6px;
+      height: 6px;
+      display: block;
+      border-radius: 50%;
+      background: #b7b2a8;
+    }
+
+    .preview-title {
+      color: #6e6a62;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: .14em;
+    }
+
+    .preview-body {
+      min-height: 516px;
+      padding: 30px;
+      display: grid;
+      place-items: center;
+      background:
+        linear-gradient(#ece8df, #ece8df) padding-box,
+        repeating-linear-gradient(0deg, transparent 0 34px, rgba(60, 58, 53, .025) 35px);
+    }
+
+    .live-preview {
+      width: min(100%, 420px);
+      border: 1px solid #d0cbc0;
+      background: #fbfaf7;
+      box-shadow: 0 18px 45px rgba(28, 27, 24, .09);
+    }
+
+    .live-head {
+      padding: 18px 20px;
+      border-bottom: 1px solid #ded9d0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .live-brand {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .08em;
+    }
+
+    .live-status {
+      color: #707069;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .live-main {
+      padding: 28px 22px 22px;
+    }
+
+    .live-kicker {
+      color: var(--accent-dark);
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    .live-main h3 {
+      margin: 9px 0 10px;
+      font-size: 29px;
+      line-height: 1.08;
+      letter-spacing: -.035em;
+    }
+
+    .live-main p {
+      margin: 0;
+      color: #69665f;
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    .live-match {
+      margin-top: 24px;
+      padding: 14px;
+      border: 1px solid #ded9d0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .live-person {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      min-width: 0;
+    }
+
+    .person-dot {
+      width: 28px;
+      height: 28px;
+      flex: 0 0 auto;
+      border: 1px solid #cbc6bc;
+      background: #efebe3;
+      display: grid;
+      place-items: center;
+      font-size: 10px;
+      font-weight: 700;
+    }
+
+    .person-name {
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    .person-state {
+      color: #8a867e;
+      font-size: 9px;
+    }
+
+    .live-arrow {
+      color: var(--accent-dark);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .live-chat {
+      margin-top: 18px;
+      border-top: 1px solid #ded9d0;
+    }
+
+    .chat-row {
+      padding: 11px 0;
+      display: flex;
+      gap: 9px;
+      border-bottom: 1px solid #eeeae2;
+    }
+
+    .chat-row:last-child { border-bottom: 0; }
+
+    .chat-name {
+      font-size: 9px;
+      font-weight: 700;
+      min-width: 48px;
+    }
+
+    .chat-text {
+      color: #65615a;
+      font-size: 10px;
+    }
+
+    .live-actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-top: 17px;
+    }
+
+    .live-action {
+      min-height: 38px;
+      border: 1px solid #cfc9bf;
+      display: grid;
+      place-items: center;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .live-action.primary {
+      border-color: var(--ink);
+      background: var(--ink);
+      color: #fff;
+    }
+
+    section {
+      border-top: 1px solid var(--line);
+    }
+
+    .section {
+      width: min(var(--max), calc(100% - 40px));
+      margin: 0 auto;
+      padding: 92px 0;
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 55px;
+      margin-bottom: 52px;
+    }
+
+    .section-head h2 {
+      margin: 0;
+      max-width: 720px;
+      font-size: clamp(34px, 4vw, 52px);
+      line-height: 1.02;
+      letter-spacing: -.045em;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid var(--line);
+    }
+
+    .step {
+      min-height: 220px;
+      padding: 25px 24px 20px 0;
+      border-right: 1px solid var(--line);
+    }
+
+    .step:not(:first-child) { padding-left: 24px; }
+    .step:last-child { border-right: 0; }
+
+    .step-number {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .step h3 {
+      margin: 48px 0 9px;
+      font-size: 20px;
+      letter-spacing: -.02em;
+    }
+
+    .step p {
+      max-width: 270px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      border-top: 1px solid var(--line);
+    }
+
+    .feature {
+      min-height: 205px;
+      padding: 25px 28px 28px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .feature:nth-child(even) {
+      padding-left: 28px;
+      border-left: 1px solid var(--line);
+    }
+
+    .feature h3 {
+      margin: 0 0 11px;
+      font-size: 18px;
+      letter-spacing: -.015em;
+    }
+
+    .feature p {
+      max-width: 460px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .platforms {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border: 1px solid var(--line);
+      background: var(--surface);
+    }
+
+    .platform {
+      padding: 34px;
+      min-height: 280px;
+    }
+
+    .platform + .platform { border-left: 1px solid var(--line); }
+
+    .platform h3 {
+      margin: 12px 0 9px;
+      font-size: 28px;
+      letter-spacing: -.035em;
+    }
+
+    .platform p {
+      max-width: 420px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .platform .button { margin-top: 30px; }
+
+    .download {
+      background: var(--dark);
+      color: #f7f5ef;
+    }
+
+    .download .section {
+      padding-top: 84px;
+      padding-bottom: 84px;
+    }
+
+    .download-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: #3a3935;
+      border: 1px solid #3a3935;
+    }
+
+    .download-card {
+      min-height: 310px;
+      padding: 34px;
+      background: var(--dark);
+    }
+
+    .download-card + .download-card { border-left: 1px solid #3a3935; }
+
+    .download-card h3 {
+      margin: 13px 0 10px;
+      font-size: 30px;
+      letter-spacing: -.035em;
+    }
+
+    .download-card p {
+      max-width: 440px;
+      color: var(--dark-muted);
+      font-size: 13px;
+    }
+
+    .download-card .meta {
+      color: #8d8a83;
+    }
+
+    .download-card .button {
+      margin-top: 26px;
+      background: #f7f5ef;
+      color: var(--dark);
+      border-color: #f7f5ef;
+    }
+
+    .download-card .button:hover {
+      background: #fff;
+      border-color: #fff;
+    }
+
+    .download-card .button.secondary {
+      color: #f7f5ef;
+      background: transparent;
+      border-color: #66635d;
+    }
+
+    .community {
+      display: grid;
+      grid-template-columns: .72fr 1.28fr;
+      gap: 75px;
+      align-items: start;
+    }
+
+    .community h2 {
+      margin: 0;
+      max-width: 620px;
+      font-size: clamp(36px, 5vw, 62px);
+      line-height: 1;
+      letter-spacing: -.055em;
+    }
+
+    .community-copy {
+      padding-top: 7px;
+      max-width: 550px;
+      color: #5f5c55;
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    .safety {
+      background: #e9e5dc;
+    }
+
+    .safety-row {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 55px;
+      align-items: start;
+    }
+
+    .safety h2,
+    .about h2,
+    .support h2 {
+      margin: 0;
+      font-size: 35px;
+      line-height: 1.05;
+      letter-spacing: -.04em;
+    }
+
+    .safety p,
+    .about p,
+    .support p {
+      max-width: 700px;
+      margin: 0;
+      color: #5e5b54;
+      font-size: 15px;
+      line-height: 1.75;
+    }
+
+    .about-grid,
+    .support-grid {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 55px;
+    }
+
+    .support a.email {
+      display: inline-block;
+      margin-top: 22px;
+      border-bottom: 1px solid #aaa69d;
+      font-weight: 600;
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      background: #e0dcd3;
+    }
+
+    .footer-inner {
+      width: min(var(--max), calc(100% - 40px));
+      min-height: 160px;
+      margin: 0 auto;
+      padding: 35px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 30px;
+    }
+
+    .footer-brand {
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: .08em;
+    }
+
+    .footer-meta {
+      margin-top: 8px;
+      color: #6d6a63;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .13em;
+    }
+
+    .footer-right {
+      color: #6d6a63;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: .09em;
+      text-align: right;
+    }
+
+    .footer-right a:hover { color: var(--ink); }
+
+    @media (max-width: 900px) {
+      .nav-links {
+        position: absolute;
+        top: 76px;
+        left: 20px;
+        right: 20px;
+        display: none;
+        margin: 0;
+        padding: 14px;
+        border: 1px solid var(--line);
+        background: var(--surface-strong);
+        box-shadow: 0 16px 40px rgba(27, 27, 25, .08);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+      }
+
+      .nav-links.open { display: flex; }
+
+      .nav-links a {
+        padding: 14px 10px;
+        border-bottom: 1px solid #eeeae2;
+      }
+
+      .nav-links a:last-child { border-bottom: 0; }
+
+      .nav-cta { display: none; }
+      .menu-toggle { display: block; }
+
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 55px;
+        padding-top: 75px;
+      }
+
+      .preview { min-height: 500px; }
+
+      .section-head,
+      .safety-row,
+      .about-grid,
+      .support-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+      }
+
+      .community { grid-template-columns: 1fr; gap: 28px; }
+    }
+
+    @media (max-width: 680px) {
+      .nav,
+      .hero,
+      .section,
+      .footer-inner {
+        width: min(100% - 28px, var(--max));
+      }
+
+      .brand small { display: none; }
+
+      .hero {
+        padding-top: 58px;
+        padding-bottom: 64px;
+      }
+
+      .hero h1 { font-size: clamp(42px, 13vw, 60px); }
+
+      .hero-copy { font-size: 15px; }
+
+      .actions {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      .button { width: 100%; }
+
+      .preview { min-height: 430px; }
+
+      .preview-body { min-height: 376px; padding: 17px; }
+
+      .live-main { padding: 22px 17px 18px; }
+
+      .live-main h3 { font-size: 25px; }
+
+      .section { padding: 68px 0; }
+
+      .section-head { margin-bottom: 38px; }
+
+      .section-head h2,
+      .community h2 { font-size: 38px; }
+
+      .steps,
+      .features,
+      .platforms,
+      .download-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .step {
+        min-height: auto;
+        padding: 22px 0;
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .step:not(:first-child) { padding-left: 0; }
+      .step:last-child { border-bottom: 0; }
+
+      .step h3 { margin-top: 27px; }
+
+      .feature {
+        min-height: auto;
+        padding: 23px 0;
+      }
+
+      .feature:nth-child(even) {
+        padding-left: 0;
+        border-left: 0;
+      }
+
+      .platform { min-height: auto; padding: 27px 22px; }
+      .platform + .platform { border-left: 0; border-top: 1px solid var(--line); }
+
+      .download-card { min-height: auto; padding: 27px 22px; }
+      .download-card + .download-card { border-left: 0; border-top: 1px solid #3a3935; }
+
+      .footer-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .footer-right {
+        text-align: left;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary navigation">
+      <a class="brand" href="#home" aria-label="NovaTalk home">
+        NOVATALK
+        <small>BY AJ APPLICATIONS</small>
+      </a>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#home">HOME</a>
+        <a href="#how-it-works">HOW IT WORKS</a>
+        <a href="#features">FEATURES</a>
+        <a href="#download">DOWNLOAD</a>
+      </div>
+
+      <a class="nav-cta" href="https://ajapplications.in.net/novatalk/">START TALKING →</a>
+
+      <button class="menu-toggle" type="button" aria-label="Open navigation" aria-controls="navLinks" aria-expanded="false">
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div>
+        <div class="eyebrow">TALK TO STRANGERS / NOVATALK</div>
+        <h1>Talk to strangers. Start a conversation.</h1>
+        <p class="hero-copy">NovaTalk is a platform for meeting and talking with people you don't already know through real-time online conversations.</p>
+        <div class="actions">
+          <a class="button" href="https://ajapplications.in.net/novatalk/">START TALKING →</a>
+          <a class="button secondary" href="https://github.com/ajmal-a11y/apkfile/releases/download/NovaTalk/app-release.apk">DOWNLOAD FOR ANDROID</a>
+        </div>
+        <div class="hero-note">WEB + ANDROID · A PRODUCT BY AJ APPLICATIONS</div>
+      </div>
+
+      <div class="preview" aria-label="NovaTalk product preview">
+        <div class="preview-top">
+          <div class="window-mark" aria-hidden="true"><i></i><i></i><i></i></div>
+          <div class="preview-title">NOVATALK / WEB EXPERIENCE</div>
+        </div>
+        <div class="preview-body">
+          <div class="live-preview">
+            <div class="live-head">
+              <div class="live-brand">NOVATALK</div>
+              <div class="live-status">ONLINE CONVERSATION</div>
+            </div>
+            <div class="live-main">
+              <div class="live-kicker">TALK TO STRANGERS</div>
+              <h3>Find someone. Say hello.</h3>
+              <p>A focused conversation experience built around meeting people you don't already know.</p>
+
+              <div class="live-match">
+                <div class="live-person">
+                  <div class="person-dot">N</div>
+                  <div>
+                    <div class="person-name">Available stranger</div>
+                    <div class="person-state">Ready to talk</div>
+                  </div>
+                </div>
+                <div class="live-arrow">→</div>
+              </div>
+
+              <div class="live-chat" aria-hidden="true">
+                <div class="chat-row">
+                  <div class="chat-name">YOU</div>
+                  <div class="chat-text">Hey, how's your day going?</div>
+                </div>
+                <div class="chat-row">
+                  <div class="chat-name">STRANGER</div>
+                  <div class="chat-text">Pretty good. Nice to meet you.</div>
+                </div>
+              </div>
+
+              <div class="live-actions" aria-hidden="true">
+                <div class="live-action primary">START TALKING</div>
+                <div class="live-action">END CHAT</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="how-it-works">
+      <div class="section">
+        <div class="section-head">
+          <div class="section-label">HOW NOVATALK WORKS</div>
+          <h2>A simple path from finding someone to having a conversation.</h2>
+        </div>
+
+        <div class="steps">
+          <article class="step">
+            <div class="step-number">01</div>
+            <h3>FIND</h3>
+            <p>Find someone available to talk to.</p>
+          </article>
+          <article class="step">
+            <div class="step-number">02</div>
+            <h3>CONNECT</h3>
+            <p>Start a conversation with a stranger.</p>
+          </article>
+          <article class="step">
+            <div class="step-number">03</div>
+            <h3>TALK</h3>
+            <p>Chat, interact, and continue the conversation naturally.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="features">
+      <div class="section">
+        <div class="section-head">
+          <div class="section-label">WHAT YOU CAN DO</div>
+          <h2>Conversation is the product.</h2>
+        </div>
+
+        <div class="features">
+          <article class="feature">
+            <h3>TALK TO STRANGERS</h3>
+            <p>Meet people you don't already know and start new conversations.</p>
+          </article>
+          <article class="feature">
+            <h3>TEXT CHAT</h3>
+            <p>Communicate through real-time text conversations.</p>
+          </article>
+          <article class="feature">
+            <h3>GROUP CHAT</h3>
+            <p>Participate in conversations involving multiple people where supported by the application.</p>
+          </article>
+          <article class="feature">
+            <h3>ANONYMOUS INTERACTION</h3>
+            <p>Keep the experience focused on conversation rather than requiring unnecessary personal information, where supported by the actual application.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section">
+        <div class="platforms">
+          <article class="platform">
+            <div class="meta">PLATFORM / WEB</div>
+            <h3>TALK FROM YOUR BROWSER</h3>
+            <p>Open NovaTalk directly from the web and start talking without installing an application.</p>
+            <a class="button" href="https://ajapplications.in.net/novatalk/">OPEN NOVATALK →</a>
+          </article>
+          <article class="platform">
+            <div class="meta">PLATFORM / ANDROID</div>
+            <h3>NOVATALK FOR ANDROID</h3>
+            <p>Take NovaTalk with you through the official Android application.</p>
+            <a class="button secondary" href="https://github.com/ajmal-a11y/apkfile/releases/download/NovaTalk/app-release.apk">DOWNLOAD APK →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="download" id="download">
+      <div class="section">
+        <div class="section-head">
+          <div class="section-label">WEB + ANDROID</div>
+          <h2>Choose how you want to talk.</h2>
+        </div>
+
+        <div class="download-grid">
+          <article class="download-card">
+            <div class="meta">PLATFORM / WEB</div>
+            <h3>Talk from your browser.</h3>
+            <p>No installation required. Open NovaTalk and start from the web experience.</p>
+            <a class="button" href="https://ajapplications.in.net/novatalk/">OPEN WEB APP →</a>
+          </article>
+
+          <article class="download-card">
+            <div class="meta">PLATFORM / ANDROID</div>
+            <h3>Use NovaTalk on Android.</h3>
+            <p>Official APK distribution for the NovaTalk Android application.</p>
+            <a class="button secondary" href="https://github.com/ajmal-a11y/apkfile/releases/download/NovaTalk/app-release.apk">DOWNLOAD APK →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section">
+        <div class="community">
+          <h2>EVERY CONVERSATION STARTS WITH A STRANGER</h2>
+          <p class="community-copy">NovaTalk is built around spontaneous conversations with people you haven't met before. Start a conversation, discover different perspectives, and see where the interaction goes.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="safety">
+      <div class="section">
+        <div class="safety-row">
+          <div class="section-label">SAFETY</div>
+          <div>
+            <h2>TALK RESPONSIBLY</h2>
+            <p>When talking with people you don't know online, avoid sharing sensitive personal information and use the available reporting, blocking, or moderation features when necessary.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about">
+      <div class="section">
+        <div class="about-grid">
+          <div class="section-label">ABOUT NOVATALK</div>
+          <div>
+            <h2>Built for real-time conversations between people who don't already know each other.</h2>
+            <p style="margin-top: 22px;">NovaTalk is a Talk to Strangers platform developed by AJ APPLICATIONS for real-time conversations between people who don't already know each other. The service is available through the web, with an Android application distributed separately.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="support">
+      <div class="section">
+        <div class="support-grid">
+          <div class="section-label">SUPPORT</div>
+          <div>
+            <h2>Need help with NovaTalk?</h2>
+            <p style="margin-top: 20px;">For NovaTalk support, technical issues, or product inquiries, contact AJ APPLICATIONS.</p>
+            <a class="email" href="mailto:ajmal@ajapplications.in.net">ajmal@ajapplications.in.net</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">NOVATALK</div>
+        <div class="footer-meta">TALK TO STRANGERS · BY AJ APPLICATIONS</div>
+      </div>
+      <div class="footer-right">
+        <div>© 2026 AJ APPLICATIONS</div>
+        <div style="margin-top: 8px;"><a href="https://ajapplications.github.io/">AJ APPLICATIONS →</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector("#navLinks");
+
+    toggle.addEventListener("click", () => {
+      const open = navLinks.classList.toggle("open");
+      toggle.setAttribute("aria-expanded", String(open));
+      toggle.setAttribute("aria-label", open ? "Close navigation" : "Open navigation");
+    });
+
+    navLinks.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+        toggle.setAttribute("aria-expanded", "false");
+        toggle.setAttribute("aria-label", "Open navigation");
+      });
+    });
+  </script>
+</body>
+</html>
