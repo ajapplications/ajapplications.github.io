@@ -1,261 +1,489 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AJ APPLICATIONS — Software built for real-world use.</title>
-<meta name="description" content="AJ APPLICATIONS designs and develops practical software, digital platforms, and technology products focused on reliability, usability, and long-term value.">
-<meta name="theme-color" content="#1B1B1A">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>AJ APPLICATIONS — Independent Software Studio</title>
+  <meta name="description" content="AJ APPLICATIONS is an independent software studio building original web, mobile, AI, real-time, infrastructure, media, automation, and game software.">
+  <link rel="canonical" href="https://ajapplications.in.net/">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="AJ APPLICATIONS — Software built for real-world use.">
-<meta property="og:description" content="AJ APPLICATIONS designs and develops practical software, digital platforms, and technology products focused on reliability, usability, and long-term value.">
-<meta property="og:site_name" content="AJ APPLICATIONS">
-<meta property="og:url" content="https://ajapplications.github.io">
+  <meta property="og:title" content="AJ APPLICATIONS — Independent Software Studio">
+  <meta property="og:description" content="AJ APPLICATIONS is an independent software studio building original web, mobile, AI, real-time, infrastructure, media, automation, and game software.">
+  <meta property="og:url" content="https://ajapplications.in.net/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="AJ APPLICATIONS">
+  <meta property="og:image" content="https://ajapplications.in.net/assets/og-mark.png">
 
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="AJ APPLICATIONS — Software built for real-world use.">
-<meta name="twitter:description" content="Practical software, digital platforms, and technology products built for reliability and long-term value.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AJ APPLICATIONS — Independent Software Studio">
+  <meta name="twitter:description" content="AJ APPLICATIONS is an independent software studio building original web, mobile, AI, real-time, infrastructure, media, automation, and game software.">
 
-<link rel="icon" type="image/svg+xml" href="favicon.svg">
-<link rel="canonical" href="https://ajapplications.github.io">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/aj-applications.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "AJ APPLICATIONS",
+    "alternateName": ["AJ Applications", "AJ"],
+    "url": "https://ajapplications.in.net/"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "AJ APPLICATIONS",
+    "url": "https://ajapplications.in.net/"
+  }
+  </script>
+  
 </head>
-<body>
+<body class="aj-page-enter">
 
-<a class="skip-link" href="#main">Skip to content</a>
-
-<header class="site-header" id="top">
-  <div class="header-inner">
-    <a class="logotype" href="#top" aria-label="AJ APPLICATIONS home">
-      <span class="logotype-mark">AJ</span>
-      <span class="logotype-word">APPLICATIONS</span>
-    </a>
-
-    <nav class="primary-nav" id="primary-nav" aria-label="Primary">
-      <ul>
-        <li><a href="#products">PRODUCTS</a></li>
-        <li><a href="#services">SERVICES</a></li>
-        <li><a href="#about">ABOUT</a></li>
-        <li><a href="#contact">CONTACT</a></li>
-      </ul>
-    </nav>
-
-    <div class="header-actions">
-      <a class="btn btn-primary btn-compact" href="#products">EXPLORE PRODUCTS</a>
-      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
+  <div class="aj-preloader" aria-hidden="true">
+    <img src="assets/logo.png" alt="AJ APPLICATIONS" class="aj-preloader-logo">
+    <div class="aj-preloader-line"></div>
   </div>
 
-  <div class="mobile-nav" id="mobile-nav" data-open="false">
-    <ul>
-      <li><a href="#products">PRODUCTS</a></li>
-      <li><a href="#services">SERVICES</a></li>
-      <li><a href="#about">ABOUT</a></li>
-      <li><a href="#contact">CONTACT</a></li>
-    </ul>
-    <a class="btn btn-primary" href="#products">EXPLORE PRODUCTS</a>
-  </div>
-</header>
+  <header class="aj-navbar" data-navbar>
+    <div class="aj-container aj-navbar-inner">
+      <a href="index.html" class="aj-logo">
+        <img src="assets/logo.png" alt="AJ APPLICATIONS" height="26">
+        <span>AJ APPLICATIONS</span>
+      </a>
 
-<main id="main">
-
-  <section class="hero">
-    <div class="hero-inner">
-      <div class="hero-copy">
-        <p class="eyebrow">AJ APPLICATIONS / SOFTWARE COMPANY</p>
-        <h1>Software built for real-world use.</h1>
-        <p class="hero-desc">AJ APPLICATIONS designs and develops practical software, digital platforms, and technology products focused on reliability, usability, and long-term value.</p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#products">EXPLORE PRODUCTS</a>
-          <a class="btn btn-outline" href="#about">ABOUT AJ APPLICATIONS</a>
-        </div>
-      </div>
-
-      <div class="hero-panel" aria-hidden="false">
-        <div class="panel-header">
-          <span class="panel-title">AJ APPLICATIONS</span>
-          <span class="panel-subtitle">PRODUCT SYSTEM</span>
-        </div>
-        <dl class="panel-rows">
-          <div class="panel-row">
-            <dt>STATUS</dt>
-            <dd><span class="status-dot"></span>OPERATIONAL</dd>
-          </div>
-          <div class="panel-row">
-            <dt>BUILD</dt>
-            <dd>ACTIVE</dd>
-          </div>
-          <div class="panel-row">
-            <dt>PLATFORM</dt>
-            <dd>MULTI-SYSTEM</dd>
-          </div>
-        </dl>
-        <div class="panel-footer">
-          <span>SYS.01</span>
-          <span>REV 2026.08</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="products">
-    <div class="section-inner">
-      <div class="section-head">
-        <p class="eyebrow">01 / PRODUCTS</p>
-        <h2>Products</h2>
-      </div>
-
-      <article class="product-row">
-        <div class="product-row-main">
-          <p class="tag">BUSINESS SOFTWARE</p>
-          <h3>MAS BILLING STUDIO</h3>
-          <p class="product-row-desc">Internal billing management software for invoice creation, account billing information, payment tracking, and billing notifications.</p>
-        </div>
-        <div class="product-row-meta">
-          <dl class="meta-pair-list">
-            <div class="meta-pair"><dt>STATUS</dt><dd>ACTIVE</dd></div>
-            <div class="meta-pair"><dt>PLATFORM</dt><dd>ANDROID</dd></div>
-          </dl>
-          <a class="link-arrow" href="#mas-billing">VIEW PRODUCT <span aria-hidden="true">&rarr;</span></a>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <section class="section section-alt" id="mas-billing">
-    <div class="section-inner featured-grid">
-      <div class="featured-specs">
-        <p class="tag">BUSINESS SOFTWARE</p>
-        <h3>MAS BILLING STUDIO</h3>
-        <dl class="spec-list">
-          <div class="spec-row"><dt>VERSION</dt><dd>1.0</dd></div>
-          <div class="spec-row"><dt>PLATFORM</dt><dd>ANDROID</dd></div>
-          <div class="spec-row"><dt>PACKAGE</dt><dd>APK</dd></div>
-          <div class="spec-row"><dt>SIZE</dt><dd>180 MB</dd></div>
-          <div class="spec-row"><dt>STATUS</dt><dd>AVAILABLE</dd></div>
-        </dl>
-      </div>
-      <div class="featured-copy">
-        <p class="featured-desc">A focused internal billing management application designed to simplify invoice management, customer billing information, payment tracking, and billing notifications.</p>
-        <a class="btn btn-primary" href="/mas/">VIEW RELEASE <span aria-hidden="true">&rarr;</span></a>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="services">
-    <div class="section-inner">
-      <div class="section-head">
-        <p class="eyebrow">02 / WHAT WE BUILD</p>
-        <h2>What we build</h2>
-      </div>
-
-      <div class="build-grid">
-        <div class="build-item">
-          <span class="build-index">01</span>
-          <h3>SOFTWARE</h3>
-          <p>Practical applications designed around real operational requirements.</p>
-        </div>
-        <div class="build-item">
-          <span class="build-index">02</span>
-          <h3>WEB PLATFORMS</h3>
-          <p>Responsive web applications and digital services.</p>
-        </div>
-        <div class="build-item">
-          <span class="build-index">03</span>
-          <h3>MOBILE</h3>
-          <p>Purpose-built mobile software and Android applications.</p>
-        </div>
-        <div class="build-item">
-          <span class="build-index">04</span>
-          <h3>DIGITAL SYSTEMS</h3>
-          <p>Tools and systems designed for specific workflows and use cases.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-alt" id="principles">
-    <div class="section-inner">
-      <div class="section-head">
-        <p class="eyebrow">03 / ENGINEERING PRINCIPLES</p>
-        <h2>Engineering principles</h2>
-      </div>
-
-      <div class="principles-list">
-        <div class="principle-row">
-          <h3>CLARITY</h3>
-          <p>Software should be understandable and straightforward to use.</p>
-        </div>
-        <div class="principle-row">
-          <h3>RELIABILITY</h3>
-          <p>Systems should remain dependable in everyday operation.</p>
-        </div>
-        <div class="principle-row">
-          <h3>PERFORMANCE</h3>
-          <p>Efficient implementation without unnecessary complexity.</p>
-        </div>
-        <div class="principle-row">
-          <h3>MAINTAINABILITY</h3>
-          <p>Products should be structured for continued development.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="about">
-    <div class="section-inner about-grid">
-      <div class="section-head">
-        <p class="eyebrow">04 / ABOUT</p>
-        <h2>About AJ Applications</h2>
-      </div>
-      <div class="about-copy">
-        <p>AJ APPLICATIONS develops software and digital products with a focus on practical functionality, clean interfaces, and dependable implementation. The company works across web, mobile, desktop, and specialized software projects.</p>
-        <ul class="about-tags">
-          <li>WEB</li>
-          <li>MOBILE</li>
-          <li>DESKTOP</li>
-          <li>SPECIALIZED SOFTWARE</li>
+      <nav aria-label="Primary">
+        <ul class="aj-nav-links aj-desktop-only d-none d-lg-flex">
+          <li><a href="products.html" class="">Products</a></li>
+          <li><a href="projects.html" class="">Projects</a></li>
+          <li><a href="services.html" class="">Services</a></li>
+          <li><a href="studio.html" class="">Studio</a></li>
+          <li><a href="technology.html" class="">Technology</a></li>
+          <li><a href="journal.html" class="">Journal</a></li>
         </ul>
+      </nav>
+
+      <div class="aj-nav-actions">
+        <a href="https://github.com/" class="aj-icon-btn d-none d-md-inline-flex" aria-label="AJ APPLICATIONS on GitHub" target="_blank" rel="noopener">
+          <i class="bi bi-github"></i>
+        </a>
+        <button class="aj-icon-btn" data-theme-toggle aria-label="Toggle color theme">
+          <i class="bi bi-circle-half" data-theme-icon aria-hidden="true"></i>
+        </button>
+        <a href="contact.html" class="aj-btn aj-btn-primary d-none d-md-inline-flex aj-magnetic">Contact</a>
+        <button class="aj-icon-btn d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#ajOffcanvas" aria-controls="ajOffcanvas" aria-label="Open menu">
+          <i class="bi bi-list" aria-hidden="true"></i>
+        </button>
       </div>
     </div>
-  </section>
+  </header>
 
-  <section class="section section-alt" id="contact">
-    <div class="section-inner contact-grid">
-      <div class="section-head">
-        <p class="eyebrow">05 / CONTACT</p>
-        <h2>Contact</h2>
-      </div>
-      <div class="contact-copy">
-        <p>For product inquiries, support, collaboration, or general information, contact AJ APPLICATIONS.</p>
-        <a class="contact-email" href="mailto:ajmal@ajapplications.in.net">ajmal@ajapplications.in.net</a>
-      </div>
+  <div class="offcanvas offcanvas-end aj-offcanvas" tabindex="-1" id="ajOffcanvas" aria-labelledby="ajOffcanvasLabel">
+    <div class="offcanvas-header">
+      <span class="aj-logo" id="ajOffcanvasLabel"><img src="assets/logo.png" alt="AJ APPLICATIONS" height="26"><span>AJ APPLICATIONS</span></span>
+      <button type="button" class="aj-icon-btn" data-bs-dismiss="offcanvas" aria-label="Close menu"><i class="bi bi-x-lg"></i></button>
     </div>
-  </section>
-
-</main>
-
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-brand">
-      <span class="logotype-word">AJ APPLICATIONS</span>
-      <p>SOFTWARE · SYSTEMS · DIGITAL PRODUCTS</p>
-    </div>
-    <div class="footer-meta">
-      <p>&copy; 2026 AJ APPLICATIONS</p>
-      <p>CREATED AND PRODUCED BY AJ APPLICATIONS</p>
+    <div class="offcanvas-body d-flex flex-column">
+      <ul class="aj-nav-links">
+          <li><a href="products.html" class="">Products</a></li>
+          <li><a href="projects.html" class="">Projects</a></li>
+          <li><a href="services.html" class="">Services</a></li>
+          <li><a href="studio.html" class="">Studio</a></li>
+          <li><a href="technology.html" class="">Technology</a></li>
+          <li><a href="journal.html" class="">Journal</a></li>
+        <li><a href="support.html">Support</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="https://github.com/" class="aj-btn aj-btn-outline mt-4" target="_blank" rel="noopener"><i class="bi bi-github"></i> GitHub</a>
     </div>
   </div>
-</footer>
+  <main>
 
-<script src="script.js"></script>
+    <section class="aj-hero">
+      <div class="aj-container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <p class="aj-eyebrow">Independent Software Studio</p>
+            <h1 class="aj-hero-headline">
+              <span><em>SOFTWARE</em></span>
+              <span><em>BUILT WITH</em></span>
+              <span><em class="aj-accent">PURPOSE.</em></span>
+            </h1>
+            <p class="aj-hero-sub">AJ APPLICATIONS is an independent software studio building original products across web, mobile, AI, real-time communication, infrastructure, media, automation, and games.</p>
+            <div class="aj-hero-cta">
+              <a href="products.html" class="aj-btn aj-btn-primary aj-magnetic">Explore Products <i class="bi bi-arrow-right"></i></a>
+              <a href="projects.html" class="aj-btn aj-btn-outline aj-magnetic">View Projects</a>
+              <a href="https://github.com/" class="aj-btn aj-btn-ghost" target="_blank" rel="noopener"><i class="bi bi-github"></i> GitHub</a>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="aj-ecosystem" data-root="">
+              <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><line class="aj-ecosystem-line" x1="100.0" y1="100.0" x2="100.0" y2="18.0"/><line class="aj-ecosystem-line" x1="100.0" y1="100.0" x2="144.3" y2="31.0"/><line class="aj-ecosystem-line" x1="100.0" y1="100.0" x2="174.6" y2="65.9"/><line class="aj-ecosystem-line" x1="100.0" y1="100.0" x2="181.2" y2="111.7"/><line class="aj-ecosystem-line" x1="100.0" y1="100.0" x2="162.0" y2="153.7"/><line class="aj-ecosystem-line" x1="100.0" y1="100.0" x2="123.1" y2="178.7"/><line class="aj-ecosystem-line" x1="100.0" y1="100.0" x2="76.9" y2="178.7"/><line class="aj-ecosystem-line" x1="100.0" y1="100.0" x2="38.0" y2="153.7"/><line class="aj-ecosystem-line" x1="100.0" y1="100.0" x2="18.8" y2="111.7"/><line class="aj-ecosystem-line" x1="100.0" y1="100.0" x2="25.4" y2="65.9"/><line class="aj-ecosystem-line" x1="100.0" y1="100.0" x2="55.7" y2="31.0"/><g class="aj-ecosystem-node" data-slug="nexavault" data-name="NEXAVAULT" data-category="Cloud Infrastructure" data-status="IN DEVELOPMENT" transform="translate(100.0,18.0)" style="cursor:pointer;"><circle r="15"/><text text-anchor="middle" dy="25">NEXAVAULT</text></g><g class="aj-ecosystem-node" data-slug="aj-torrenties" data-name="AJ Torrenties" data-category="Desktop / Networking" data-status="IN DEVELOPMENT" transform="translate(144.3,31.0)" style="cursor:pointer;"><circle r="15"/><text text-anchor="middle" dy="25">AJ Torrenti…</text></g><g class="aj-ecosystem-node" data-slug="aj-live" data-name="AJ.Live" data-category="Sports Streaming" data-status="IN DEVELOPMENT" transform="translate(174.6,65.9)" style="cursor:pointer;"><circle r="15"/><text text-anchor="middle" dy="25">AJ.Live</text></g><g class="aj-ecosystem-node" data-slug="novatalk" data-name="NovaTalk" data-category="Communication" data-status="LIVE" transform="translate(181.2,111.7)" style="cursor:pointer;"><circle r="15"/><text text-anchor="middle" dy="25">NovaTalk</text></g><g class="aj-ecosystem-node" data-slug="aj-ai" data-name="AJ AI" data-category="Local AI" data-status="IN DEVELOPMENT" transform="translate(162.0,153.7)" style="cursor:pointer;"><circle r="15"/><text text-anchor="middle" dy="25">AJ AI</text></g><g class="aj-ecosystem-node" data-slug="castrix" data-name="Castrix" data-category="Music / Media" data-status="BETA" transform="translate(123.1,178.7)" style="cursor:pointer;"><circle r="15"/><text text-anchor="middle" dy="25">Castrix</text></g><g class="aj-ecosystem-node" data-slug="tarabtendo" data-name="TarabTendo" data-category="Games" data-status="AWAITING HOSTING" transform="translate(76.9,178.7)" style="cursor:pointer;"><circle r="15"/><text text-anchor="middle" dy="25">TarabTendo</text></g><g class="aj-ecosystem-node" data-slug="aj-search" data-name="AJ Search" data-category="Web" data-status="EXPERIMENTAL" transform="translate(38.0,153.7)" style="cursor:pointer;"><circle r="15"/><text text-anchor="middle" dy="25">AJ Search</text></g><g class="aj-ecosystem-node" data-slug="aj-ads" data-name="AJ ADS" data-category="Business" data-status="IN DEVELOPMENT" transform="translate(18.8,111.7)" style="cursor:pointer;"><circle r="15"/><text text-anchor="middle" dy="25">AJ ADS</text></g><g class="aj-ecosystem-node" data-slug="ajdroid" data-name="AJdroid" data-category="Mobile" data-status="IN DEVELOPMENT" transform="translate(25.4,65.9)" style="cursor:pointer;"><circle r="15"/><text text-anchor="middle" dy="25">AJdroid</text></g><g class="aj-ecosystem-node" data-slug="ajhome-launcher" data-name="AJhome Launcher" data-category="Mobile" data-status="EXPERIMENTAL" transform="translate(55.7,31.0)" style="cursor:pointer;"><circle r="15"/><text text-anchor="middle" dy="25">AJhome Laun…</text></g><g class="aj-ecosystem-node aj-ecosystem-center" transform="translate(100.0,100.0)"><circle r="22"/><text text-anchor="middle" dy="3">AJ</text></g></svg>
+              <div class="aj-ecosystem-tooltip"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="aj-section">
+      <div class="aj-container">
+        <div class="row g-5">
+          <div class="col-lg-6 aj-reveal">
+            <p class="aj-eyebrow">The Studio</p>
+            <h2 style="font-size:clamp(1.8rem,3.4vw,2.8rem);">One studio.<br>Many ideas.<br>Real software.</h2>
+          </div>
+          <div class="col-lg-6 d-flex align-items-center aj-reveal">
+            <p style="font-size:1.1rem;color:var(--aj-text);">AJ APPLICATIONS builds software from the ground up, experimenting across communication, AI, infrastructure, media, mobile, automation, and games. Every product in this ecosystem starts as an original build rather than a re-skin of something that already exists.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="aj-section-tight aj-bg-surface">
+      <div class="aj-container">
+        <div class="row g-4">
+          <div class="col-6 col-lg-3 aj-reveal">
+            <div class="aj-metric"><div class="num aj-mono">15+</div><div class="label">Apps Built</div></div>
+          </div>
+          <div class="col-6 col-lg-3 aj-reveal">
+            <div class="aj-metric"><div class="num aj-mono">3</div><div class="label">Platforms</div></div>
+          </div>
+          <div class="col-6 col-lg-3 aj-reveal">
+            <div class="aj-metric"><div class="num aj-mono">1</div><div class="label">Live Product</div></div>
+          </div>
+          <div class="col-6 col-lg-3 aj-reveal">
+            <div class="aj-metric"><div class="num aj-mono">100%</div><div class="label">Original Code</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="aj-section">
+      <div class="aj-container">
+        <div class="aj-section-head aj-reveal">
+          <p class="aj-eyebrow">Featured</p>
+          <h2>Three products, three different problems.</h2>
+          <p>A representative slice of what's currently being built inside the studio.</p>
+        </div>
+
+        <div class="row g-4 mb-4">
+          <div class="col-lg-7 aj-reveal">
+            <a href="products/nexavault.html" class="aj-product-card d-block h-100">
+              <div class="aj-media" style="aspect-ratio:16/9;">
+                <div class="w-100 h-100 d-flex align-items-center justify-content-center aj-grid-bg" style="position:absolute;inset:0;"></div>
+                <div class="w-100 h-100 d-flex align-items-center justify-content-center" style="position:relative;">
+                  <span class="aj-mono" style="color:#dbe4f3;font-size:1.2rem;letter-spacing:.1em;">NEXAVAULT</span>
+                </div>
+              </div>
+              <div class="aj-body">
+                <div class="aj-meta"><span class="aj-cat">Cloud Infrastructure</span><span class="aj-status "><span class="aj-status-dot"></span>IN DEVELOPMENT</span></div>
+                <h3 style="font-size:1.4rem;">NEXAVAULT</h3>
+                <p>Your files. Your server. Your privacy. Self-hosted storage designed to run on hardware you control.</p>
+                <span class="aj-open">Explore NEXAVAULT <i class="bi bi-arrow-right"></i></span>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-5 aj-reveal">
+            <a href="products/aj-live.html" class="aj-product-card d-block h-100">
+              <div class="aj-media d-flex align-items-center justify-content-center">
+                <i class="bi bi-broadcast" style="font-size:2rem;color:#3b4a63;"></i>
+              </div>
+              <div class="aj-body">
+                <div class="aj-meta"><span class="aj-cat">Sports Streaming</span><span class="aj-status "><span class="aj-status-dot"></span>IN DEVELOPMENT</span></div>
+                <h3 style="font-size:1.3rem;">AJ.Live</h3>
+                <p>Sports streaming infrastructure built around RTMP ingest and HLS delivery.</p>
+                <span class="aj-open">Explore AJ.Live <i class="bi bi-arrow-right"></i></span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-12 aj-reveal">
+            <a href="products/novatalk.html" class="aj-product-card d-block">
+              <div class="row g-0">
+                <div class="col-md-5">
+                  <div class="aj-media h-100 d-flex align-items-center justify-content-center" style="aspect-ratio:auto;min-height:220px;">
+                    <i class="bi bi-camera-video" style="font-size:2rem;color:#3b4a63;"></i>
+                  </div>
+                </div>
+                <div class="col-md-7">
+                  <div class="aj-body h-100 d-flex flex-column justify-content-center">
+                    <div class="aj-meta"><span class="aj-cat">Communication / Real-Time</span><span class="aj-status aj-status--live"><span class="aj-status-dot"></span>LIVE</span></div>
+                    <h3 style="font-size:1.5rem;">NovaTalk</h3>
+                    <p>Anonymous real-time video and text chat, built on WebRTC and Socket.IO.</p>
+                    <div class="mb-3"><span class="aj-chip me-1 mb-1">WebRTC</span><span class="aj-chip me-1 mb-1">Socket.IO</span><span class="aj-chip me-1 mb-1">Mobile-first</span></div>
+                    <span class="aj-open">Open NovaTalk <i class="bi bi-arrow-up-right"></i></span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="aj-section aj-bg-surface">
+      <div class="aj-container">
+        <div class="aj-section-head aj-reveal">
+          <p class="aj-eyebrow">Selected Projects</p>
+          <h2>Everything starts as a project.</h2>
+          <p>A wider look at what's in motion across the studio, at every stage from experiment to release.</p>
+        </div>
+        <div class="row g-4">
+          
+        <div class="col-md-6 col-lg-4" data-tag="Web">
+          <a href="#" class="aj-product-card d-block h-100 aj-reveal">
+            <div class="aj-media d-flex align-items-center justify-content-center">
+              <span class="aj-mono text-uppercase" style="color:#3b4a63;font-size:.72rem;letter-spacing:.08em;">AJ Search</span>
+            </div>
+            <div class="aj-body">
+              <div class="aj-meta">
+                <span class="aj-cat">Web</span>
+                <span class="aj-status "><span class="aj-status-dot"></span>EXPERIMENTAL</span>
+              </div>
+              <h3>AJ Search</h3>
+              <p>An in-progress search experiment exploring query handling and result ranking.</p>
+              <div class="mb-3"><span class="aj-chip me-1 mb-1">JavaScript</span></div>
+              <span class="aj-open">Details unavailable </span>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-4" data-tag="Business">
+          <a href="#" class="aj-product-card d-block h-100 aj-reveal">
+            <div class="aj-media d-flex align-items-center justify-content-center">
+              <span class="aj-mono text-uppercase" style="color:#3b4a63;font-size:.72rem;letter-spacing:.08em;">AJ ADS</span>
+            </div>
+            <div class="aj-body">
+              <div class="aj-meta">
+                <span class="aj-cat">Business</span>
+                <span class="aj-status "><span class="aj-status-dot"></span>IN DEVELOPMENT</span>
+              </div>
+              <h3>AJ ADS</h3>
+              <p>An advertising and listings system built for AJ APPLICATIONS products.</p>
+              <div class="mb-3"><span class="aj-chip me-1 mb-1">Node.js</span></div>
+              <span class="aj-open">Details unavailable </span>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-4" data-tag="Mobile">
+          <a href="#" class="aj-product-card d-block h-100 aj-reveal">
+            <div class="aj-media d-flex align-items-center justify-content-center">
+              <span class="aj-mono text-uppercase" style="color:#3b4a63;font-size:.72rem;letter-spacing:.08em;">AJdroid</span>
+            </div>
+            <div class="aj-body">
+              <div class="aj-meta">
+                <span class="aj-cat">Mobile</span>
+                <span class="aj-status "><span class="aj-status-dot"></span>IN DEVELOPMENT</span>
+              </div>
+              <h3>AJdroid</h3>
+              <p>An Android-focused mobile project exploring native and cross-platform tooling.</p>
+              <div class="mb-3"><span class="aj-chip me-1 mb-1">Android</span></div>
+              <span class="aj-open">Details unavailable </span>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-4" data-tag="Mobile">
+          <a href="#" class="aj-product-card d-block h-100 aj-reveal">
+            <div class="aj-media d-flex align-items-center justify-content-center">
+              <span class="aj-mono text-uppercase" style="color:#3b4a63;font-size:.72rem;letter-spacing:.08em;">AJhome Launcher</span>
+            </div>
+            <div class="aj-body">
+              <div class="aj-meta">
+                <span class="aj-cat">Mobile</span>
+                <span class="aj-status "><span class="aj-status-dot"></span>EXPERIMENTAL</span>
+              </div>
+              <h3>AJhome Launcher</h3>
+              <p>A custom Android home-screen launcher experiment.</p>
+              <div class="mb-3"><span class="aj-chip me-1 mb-1">Android</span></div>
+              <span class="aj-open">Details unavailable </span>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-4" data-tag="Media">
+          <a href="#" class="aj-product-card d-block h-100 aj-reveal">
+            <div class="aj-media d-flex align-items-center justify-content-center">
+              <span class="aj-mono text-uppercase" style="color:#3b4a63;font-size:.72rem;letter-spacing:.08em;">AJ Cine</span>
+            </div>
+            <div class="aj-body">
+              <div class="aj-meta">
+                <span class="aj-cat">Media</span>
+                <span class="aj-status "><span class="aj-status-dot"></span>PROJECT</span>
+              </div>
+              <h3>AJ Cine</h3>
+              <p>A media-catalog project exploring browsing and discovery interfaces.</p>
+              <div class="mb-3"><span class="aj-chip me-1 mb-1">JavaScript</span></div>
+              <span class="aj-open">Details unavailable </span>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-4" data-tag="Media">
+          <a href="#" class="aj-product-card d-block h-100 aj-reveal">
+            <div class="aj-media d-flex align-items-center justify-content-center">
+              <span class="aj-mono text-uppercase" style="color:#3b4a63;font-size:.72rem;letter-spacing:.08em;">StreamNova</span>
+            </div>
+            <div class="aj-body">
+              <div class="aj-meta">
+                <span class="aj-cat">Media / Streaming</span>
+                <span class="aj-status "><span class="aj-status-dot"></span>PROJECT</span>
+              </div>
+              <h3>StreamNova</h3>
+              <p>A streaming-focused project adjacent to the AJ.Live infrastructure work.</p>
+              <div class="mb-3"><span class="aj-chip me-1 mb-1">Node.js</span></div>
+              <span class="aj-open">Details unavailable </span>
+            </div>
+          </a>
+        </div>
+        </div>
+        <div class="text-center mt-5 aj-reveal">
+          <a href="projects.html" class="aj-btn aj-btn-outline aj-magnetic">View all projects <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="aj-section">
+      <div class="aj-container">
+        <div class="row g-5">
+          <div class="col-lg-5 aj-reveal">
+            <p class="aj-eyebrow">Technology</p>
+            <h2 style="font-size:clamp(1.8rem,3vw,2.4rem);">One stack, applied across the ecosystem.</h2>
+            <p style="margin-top:16px;">From local AI to real-time video to self-hosted storage — the same disciplined engineering approach runs through every product.</p>
+            <a href="technology.html" class="aj-btn aj-btn-outline mt-4 aj-magnetic">See the technology map <i class="bi bi-arrow-right"></i></a>
+          </div>
+          <div class="col-lg-7 aj-reveal">
+            <div class="row g-3">
+              <div class="col-6"><div class="aj-card h-100"><i class="bi bi-server mb-2" style="font-size:1.3rem;color:var(--aj-primary);"></i><h4 style="font-size:.95rem;">Backend</h4><p style="font-size:.85rem;">Node.js, Express, Python, Flask</p></div></div>
+              <div class="col-6"><div class="aj-card h-100"><i class="bi bi-cpu mb-2" style="font-size:1.3rem;color:var(--aj-primary);"></i><h4 style="font-size:.95rem;">AI</h4><p style="font-size:.85rem;">Ollama, local LLMs, RAG</p></div></div>
+              <div class="col-6"><div class="aj-card h-100"><i class="bi bi-broadcast-pin mb-2" style="font-size:1.3rem;color:var(--aj-primary);"></i><h4 style="font-size:.95rem;">Real-Time</h4><p style="font-size:.85rem;">WebRTC, Socket.IO, WebSockets</p></div></div>
+              <div class="col-6"><div class="aj-card h-100"><i class="bi bi-database mb-2" style="font-size:1.3rem;color:var(--aj-primary);"></i><h4 style="font-size:.95rem;">Database</h4><p style="font-size:.85rem;">SQLite, MongoDB, Firebase</p></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="aj-section aj-bg-surface">
+      <div class="aj-container">
+        <div class="aj-section-head aj-reveal">
+          <p class="aj-eyebrow">Engineering Philosophy</p>
+          <h2>Built from scratch.</h2>
+        </div>
+        <div class="row g-0">
+          <div class="col-md-6">
+            <div class="aj-principle"><h3>Original Code</h3><p>Build from scratch rather than simply re-skinning existing products.</p></div>
+            <div class="aj-principle"><h3>Real Problems</h3><p>Software should solve actual problems, not imagined ones.</p></div>
+            <div class="aj-principle"><h3>Privacy</h3><p>Consider privacy and data control during product design, not after.</p></div>
+          </div>
+          <div class="col-md-6">
+            <div class="aj-principle"><h3>Experimentation</h3><p>Not every experiment needs to become a commercial product.</p></div>
+            <div class="aj-principle"><h3>Engineering</h3><p>Projects should be technically interesting as well as useful.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="aj-section">
+      <div class="aj-container">
+        <div class="aj-section-head aj-reveal">
+          <p class="aj-eyebrow">Journal</p>
+          <h2>Notes from the studio.</h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-4 aj-reveal">
+            <a href="journal/local-ai-ollama-rag.html" class="aj-article-card">
+              <span class="cat">AI</span>
+              <h3>Building AJ AI around Ollama and retrieval</h3>
+              <span class="meta">Engineering notes</span>
+            </a>
+          </div>
+          <div class="col-md-4 aj-reveal">
+            <a href="journal/castrix-telegram-administration.html" class="aj-article-card">
+              <span class="cat">Infrastructure</span>
+              <h3>Running Castrix administration through Telegram</h3>
+              <span class="meta">Engineering notes</span>
+            </a>
+          </div>
+          <div class="col-md-4 aj-reveal">
+            <a href="journal/tarabtendo-difficulty-design.html" class="aj-article-card">
+              <span class="cat">Games</span>
+              <h3>Designing difficulty in TarabTendo</h3>
+              <span class="meta">Engineering notes</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="aj-section aj-bg-surface" style="border-top:1px solid var(--aj-border);">
+      <div class="aj-container text-center">
+        <div class="aj-reveal">
+          <h2 style="font-size:clamp(2rem,4vw,3.2rem);margin-bottom:20px;">Build something real.</h2>
+          <p style="font-size:1.1rem;max-width:520px;margin:0 auto 32px;">Explore the software, experiments, and systems coming out of AJ APPLICATIONS.</p>
+          <div class="d-flex gap-3 justify-content-center flex-wrap">
+            <a href="products.html" class="aj-btn aj-btn-primary aj-magnetic">Explore Products <i class="bi bi-arrow-right"></i></a>
+            <a href="contact.html" class="aj-btn aj-btn-outline aj-magnetic">Contact AJ APPLICATIONS</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="aj-footer">
+    <div class="aj-container">
+      <div class="row g-5">
+        <div class="col-lg-4 aj-footer-brand">
+          <a href="index.html" class="aj-logo"><img src="assets/logo.png" alt="AJ APPLICATIONS" height="26"><span>AJ APPLICATIONS</span></a>
+          <p>Software built with purpose.</p>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h4>Studio</h4>
+          <ul>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="studio.html">Studio</a></li>
+          <li><a href="technology.html">Technology</a></li>
+          <li><a href="journal.html">Journal</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h4>Resources</h4>
+          <ul>
+          <li><a href="support.html">Support</a></li>
+          <li><a href="security.html">Security</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="terms.html">Terms</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="https://github.com/" target="_blank" rel="noopener"><i class="bi bi-github me-2"></i>GitHub</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="aj-footer-bottom">
+        <span>&copy; <span data-year>2026</span> AJ APPLICATIONS. All rights reserved.</span>
+        <span>Independent software studio.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

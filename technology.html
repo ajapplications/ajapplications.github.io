@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Technology — AJ APPLICATIONS</title>
+  <meta name="description" content="An interactive map of the technologies used across the AJ APPLICATIONS product ecosystem, from Node.js to WebRTC to local AI.">
+  <link rel="canonical" href="https://ajapplications.in.net/technology.html">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+
+  <meta property="og:title" content="Technology — AJ APPLICATIONS">
+  <meta property="og:description" content="An interactive map of the technologies used across the AJ APPLICATIONS product ecosystem, from Node.js to WebRTC to local AI.">
+  <meta property="og:url" content="https://ajapplications.in.net/technology.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="AJ APPLICATIONS">
+  <meta property="og:image" content="https://ajapplications.in.net/assets/og-mark.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Technology — AJ APPLICATIONS">
+  <meta name="twitter:description" content="An interactive map of the technologies used across the AJ APPLICATIONS product ecosystem, from Node.js to WebRTC to local AI.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/aj-applications.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "AJ APPLICATIONS",
+    "alternateName": ["AJ Applications", "AJ"],
+    "url": "https://ajapplications.in.net/"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "AJ APPLICATIONS",
+    "url": "https://ajapplications.in.net/"
+  }
+  </script>
+  
+</head>
+<body class="aj-page-enter">
+
+  <div class="aj-preloader" aria-hidden="true">
+    <img src="assets/logo.png" alt="AJ APPLICATIONS" class="aj-preloader-logo">
+    <div class="aj-preloader-line"></div>
+  </div>
+
+  <header class="aj-navbar" data-navbar>
+    <div class="aj-container aj-navbar-inner">
+      <a href="index.html" class="aj-logo">
+        <img src="assets/logo.png" alt="AJ APPLICATIONS" height="26">
+        <span>AJ APPLICATIONS</span>
+      </a>
+
+      <nav aria-label="Primary">
+        <ul class="aj-nav-links aj-desktop-only d-none d-lg-flex">
+          <li><a href="products.html" class="">Products</a></li>
+          <li><a href="projects.html" class="">Projects</a></li>
+          <li><a href="services.html" class="">Services</a></li>
+          <li><a href="studio.html" class="">Studio</a></li>
+          <li><a href="technology.html" class="is-active">Technology</a></li>
+          <li><a href="journal.html" class="">Journal</a></li>
+        </ul>
+      </nav>
+
+      <div class="aj-nav-actions">
+        <a href="https://github.com/" class="aj-icon-btn d-none d-md-inline-flex" aria-label="AJ APPLICATIONS on GitHub" target="_blank" rel="noopener">
+          <i class="bi bi-github"></i>
+        </a>
+        <button class="aj-icon-btn" data-theme-toggle aria-label="Toggle color theme">
+          <i class="bi bi-circle-half" data-theme-icon aria-hidden="true"></i>
+        </button>
+        <a href="contact.html" class="aj-btn aj-btn-primary d-none d-md-inline-flex aj-magnetic">Contact</a>
+        <button class="aj-icon-btn d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#ajOffcanvas" aria-controls="ajOffcanvas" aria-label="Open menu">
+          <i class="bi bi-list" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="offcanvas offcanvas-end aj-offcanvas" tabindex="-1" id="ajOffcanvas" aria-labelledby="ajOffcanvasLabel">
+    <div class="offcanvas-header">
+      <span class="aj-logo" id="ajOffcanvasLabel"><img src="assets/logo.png" alt="AJ APPLICATIONS" height="26"><span>AJ APPLICATIONS</span></span>
+      <button type="button" class="aj-icon-btn" data-bs-dismiss="offcanvas" aria-label="Close menu"><i class="bi bi-x-lg"></i></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column">
+      <ul class="aj-nav-links">
+          <li><a href="products.html" class="">Products</a></li>
+          <li><a href="projects.html" class="">Projects</a></li>
+          <li><a href="services.html" class="">Services</a></li>
+          <li><a href="studio.html" class="">Studio</a></li>
+          <li><a href="technology.html" class="is-active">Technology</a></li>
+          <li><a href="journal.html" class="">Journal</a></li>
+        <li><a href="support.html">Support</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="https://github.com/" class="aj-btn aj-btn-outline mt-4" target="_blank" rel="noopener"><i class="bi bi-github"></i> GitHub</a>
+    </div>
+  </div>
+  <main>
+
+    <section class="aj-page-hero">
+      <div class="aj-container">
+        <p class="aj-eyebrow">Technology</p>
+        <h1>The technology map.</h1>
+        <p>Hover or tap any technology to see where it's actually used across the ecosystem. Nothing here is aspirational — every entry maps to a real project.</p>
+      </div>
+    </section>
+    <section class="aj-section-tight" style="border-top:none;padding-top:0;">
+      <div class="aj-container">
+        <div class="row g-5">
+          <div class="col-lg-8">
+            <div class="aj-tech-group"><h4>Backend</h4><div><span class="aj-tech-item" data-related="NEXAVAULT, AJ.Live, NovaTalk, AJ ADS, AJ File" data-name="Node.js">Node.js</span><span class="aj-tech-item" data-related="NEXAVAULT, AJ.Live" data-name="Express">Express</span><span class="aj-tech-item" data-related="AJ AI" data-name="Python">Python</span><span class="aj-tech-item" data-related="AJ AI" data-name="Flask">Flask</span></div></div><div class="aj-tech-group"><h4>Frontend</h4><div><span class="aj-tech-item" data-related="All web products" data-name="HTML">HTML</span><span class="aj-tech-item" data-related="All web products" data-name="CSS">CSS</span><span class="aj-tech-item" data-related="All web products" data-name="JavaScript">JavaScript</span><span class="aj-tech-item" data-related="AJ Search, in-progress interfaces" data-name="React">React</span></div></div><div class="aj-tech-group"><h4>Database</h4><div><span class="aj-tech-item" data-related="NEXAVAULT" data-name="SQLite">SQLite</span><span class="aj-tech-item" data-related="Castrix" data-name="MongoDB">MongoDB</span><span class="aj-tech-item" data-related="Early-stage projects" data-name="Firebase">Firebase</span></div></div><div class="aj-tech-group"><h4>Real-Time</h4><div><span class="aj-tech-item" data-related="NovaTalk" data-name="WebRTC">WebRTC</span><span class="aj-tech-item" data-related="NovaTalk, AJ Talk to Stranger" data-name="Socket.IO">Socket.IO</span><span class="aj-tech-item" data-related="AJ.Live" data-name="WebSockets">WebSockets</span></div></div><div class="aj-tech-group"><h4>AI</h4><div><span class="aj-tech-item" data-related="AJ AI" data-name="Ollama">Ollama</span><span class="aj-tech-item" data-related="AJ AI" data-name="Local LLMs">Local LLMs</span><span class="aj-tech-item" data-related="AJ AI" data-name="RAG">RAG</span></div></div><div class="aj-tech-group"><h4>Graphics</h4><div><span class="aj-tech-item" data-related="TarabTendo" data-name="Canvas">Canvas</span><span class="aj-tech-item" data-related="Experimental 3D prototypes" data-name="Three.js">Three.js</span><span class="aj-tech-item" data-related="Experimental 3D prototypes" data-name="WebGL">WebGL</span></div></div><div class="aj-tech-group"><h4>Mobile</h4><div><span class="aj-tech-item" data-related="AJdroid, AJhome Launcher" data-name="Android">Android</span><span class="aj-tech-item" data-related="In-progress mobile experiments" data-name="Cross-platform">Cross-platform</span></div></div>
+          </div>
+          <div class="col-lg-4">
+            <div class="aj-card" style="position:sticky;top:110px;">
+              <h4 style="font-size:.8rem;text-transform:uppercase;letter-spacing:.06em;color:var(--aj-muted);margin-bottom:12px;">Used in</h4>
+              <p id="tech-related" style="color:var(--aj-text);">Hover a technology to see where it's used.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var out = document.getElementById('tech-related');
+        document.querySelectorAll('.aj-tech-item').forEach(function (chip) {
+          chip.addEventListener('mouseenter', function () {
+            document.querySelectorAll('.aj-tech-item').forEach(function(c){c.classList.remove('is-active');});
+            chip.classList.add('is-active');
+            out.textContent = chip.getAttribute('data-name') + ' — ' + chip.getAttribute('data-related');
+          });
+        });
+      });
+    </script>
+
+  </main>
+
+  <footer class="aj-footer">
+    <div class="aj-container">
+      <div class="row g-5">
+        <div class="col-lg-4 aj-footer-brand">
+          <a href="index.html" class="aj-logo"><img src="assets/logo.png" alt="AJ APPLICATIONS" height="26"><span>AJ APPLICATIONS</span></a>
+          <p>Software built with purpose.</p>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h4>Studio</h4>
+          <ul>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="studio.html">Studio</a></li>
+          <li><a href="technology.html">Technology</a></li>
+          <li><a href="journal.html">Journal</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h4>Resources</h4>
+          <ul>
+          <li><a href="support.html">Support</a></li>
+          <li><a href="security.html">Security</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="terms.html">Terms</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="https://github.com/" target="_blank" rel="noopener"><i class="bi bi-github me-2"></i>GitHub</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="aj-footer-bottom">
+        <span>&copy; <span data-year>2026</span> AJ APPLICATIONS. All rights reserved.</span>
+        <span>Independent software studio.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

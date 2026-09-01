@@ -1,0 +1,45 @@
+/* AJ APPLICATIONS — Animation layer */
+
+@keyframes aj-fade-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.aj-page-enter { animation: aj-fade-up 0.7s var(--aj-ease) both; }
+
+/* Magnetic buttons (desktop, non-touch, motion-safe only) */
+.aj-magnetic { transition: transform 0.25s var(--aj-ease); will-change: transform; }
+
+/* Custom cursor dot */
+.aj-cursor {
+  position: fixed;
+  top: 0; left: 0;
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--aj-primary);
+  pointer-events: none;
+  z-index: 10000;
+  transform: translate(-50%, -50%);
+  transition: width 0.2s ease, height 0.2s ease, opacity 0.2s ease;
+  opacity: 0;
+  mix-blend-mode: difference;
+}
+.aj-cursor.is-active { opacity: 1; }
+.aj-cursor.is-hover { width: 28px; height: 28px; background: #fff; }
+
+@media (hover: none), (pointer: coarse) {
+  .aj-cursor { display: none !important; }
+}
+
+/* 404 mark reconstruct — wipe reveal, works on the raster logo mark */
+.aj-404-mark {
+  clip-path: inset(0 100% 0 0);
+  animation: aj-404-reveal 0.9s var(--aj-ease) forwards 0.15s;
+}
+@keyframes aj-404-reveal { to { clip-path: inset(0 0 0 0); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .aj-page-enter { animation: none; }
+  .aj-404-mark { animation: none; clip-path: inset(0 0 0 0); }
+  .aj-magnetic { transition: none !important; transform: none !important; }
+}

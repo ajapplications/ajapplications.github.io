@@ -1,0 +1,25 @@
+/* AJ APPLICATIONS — Responsive layer */
+
+@media (max-width: 991.98px) {
+  .aj-nav-links.aj-desktop-only { display: none; }
+  .aj-section { padding: 88px 0; }
+  .aj-hero { padding: 140px 0 64px; }
+  .aj-service-row { grid-template-columns: 1fr; gap: 10px; }
+}
+
+@media (max-width: 767.98px) {
+  .aj-section { padding: 64px 0; }
+  .aj-section-head { margin-bottom: 40px; }
+  .aj-page-hero { padding: 132px 0 56px; }
+  .aj-hero-cta { flex-direction: column; align-items: stretch; }
+  .aj-hero-cta .aj-btn { justify-content: center; }
+  .aj-footer-bottom { flex-direction: column; align-items: flex-start; }
+  .aj-diagram-node { min-width: 160px; font-size: 0.78rem; }
+}
+
+@media (max-width: 575.98px) {
+  .aj-container, .aj-container-narrow { padding-left: 18px; padding-right: 18px; }
+  .aj-hero-headline { font-size: clamp(2.2rem, 11vw, 2.8rem); }
+}
+
+html, body { max-width: 100%; overflow-x: hidden; }
